@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'SearchBar',
+  name: 'Header',
   methods: {
     toggleSidebar() {
       this.$emit('toggle-sidebar');
@@ -10,14 +10,22 @@ export default {
 </script>
 
 <template>
-  <div class="search-bar-container">
-    <button class="sidebar-toggle" @click.prevent="toggleSidebar">
-      <i class="fas fa-bars"></i>
-    </button>
-    <input type="text" class="search-bar" placeholder="Search">
-    <button class="search-button">
-      <i class="fas fa-search"></i>
-    </button>
+  <div class="header">
+    <div id="search">
+      <div class="search-bar-container">
+        <button class="sidebar-toggle" @click.prevent="toggleSidebar">
+          <i class="fas fa-bars"></i>
+        </button>
+        <input type="text" class="search-bar" placeholder="Search">
+        <button class="search-button">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div class="right">
+       
+      </div>
+    </div>
+
   </div>
   <div class="search-container">
     <div class="title-container">
@@ -118,5 +126,13 @@ export default {
   color: #fff;
   font-size: 18px;
 }
+
+.header {
+  display: inline-flex;
+}
+#search {
+  margin-left: 200px;
+}
+
 </style>
   

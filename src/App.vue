@@ -1,15 +1,15 @@
   
 <script>
 import Sidebar from './components/Sidebar.vue';
-import SearchBar from './components/SearchBar.vue';
-import VideoList from './components/VideoList.vue';
+import Header from './components/Header.vue';
+import MainContent from './components/MainContent.vue';
 
 export default {
     name: 'App',
     components: {
         Sidebar,
-        SearchBar,
-        VideoList,
+        Header,
+        MainContent,
     },
 };
 </script>
@@ -18,9 +18,9 @@ export default {
     <div id="app">
         <Sidebar />
         <main>
-            <SearchBar />
+            <Header />
             <router-view />
-            <VideoList />
+            <MainContent />
         </main>
     </div>
 </template>
