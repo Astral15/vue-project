@@ -1,5 +1,6 @@
 import getter from "./getter"
 import mutations from "./mutation"
+import actions from "./actions"
 const menu = {
     name: true,
     state() {
@@ -8,7 +9,8 @@ const menu = {
         }
     },
     getter,
-    mutations
+    mutations,
+    actions
 }
 
 export default menu

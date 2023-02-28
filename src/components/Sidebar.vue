@@ -9,12 +9,12 @@ export default {
   setup() {
     let toggledSidebar = ref(true)
     // const store = useStore()
-    // let menuOn = computed(() => store.getters["menu/menuOn"])
+    // let menuOn = computed(() => store.getters["menuModule/menu"])
 
-    const changeState = () => {
-      toggledSidebar = !toggledSidebar
-      console.log(toggledSidebar)
-    }
+    // const changeState = () => {
+    //   toggledSidebar = !toggledSidebar
+    //   console.log(toggledSidebar)
+    // }
 
     const logos = [
       { name: 'home', url: '/src/assets/logos/home.svg' },
@@ -26,11 +26,11 @@ export default {
       { name: 'history', url: '/src/assets/logos/history.svg' },
       { name: 'favourite', url: '/src/assets/logos/favorite.svg' },
       { name: 'long out', url: '/src/assets/logos/logout.svg' },
-    ];
+    ]
 
     return {
       toggledSidebar,
-      changeState,
+ //   changeState,
       logos,
     }
   }

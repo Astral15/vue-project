@@ -1,9 +1,11 @@
   
 <script>
+
 export default {
   name: 'MainContent',
   data() {
     return {
+      searchValue: null,
       videos: [
         {
           title: 'Video 1',
@@ -11,6 +13,7 @@ export default {
           views: '10K',
           thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
           src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
+
         },
         {
           title: 'Video 2',
@@ -18,6 +21,7 @@ export default {
           views: '20K',
           thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
           src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
+
         },
         {
           title: 'Video 3',
@@ -25,6 +29,7 @@ export default {
           views: '200K',
           thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
           src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
+
         },
         {
           title: 'Video 4',
@@ -32,6 +37,71 @@ export default {
           views: '205K',
           thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
           src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
+
+        },
+        {
+          title: 'Video 5',
+          channel: 'Channel 5',
+          views: '10K',
+          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
+          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
+
+        },
+        {
+          title: 'Video 6',
+          channel: 'Channel 6',
+          views: '10K',
+          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
+          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
+
+        },
+        {
+          title: 'Video 7',
+          channel: 'Channel 7',
+          views: '10K',
+          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
+          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
+
+        },
+        {
+          title: 'Video 8',
+          channel: 'Channel 8',
+          views: '10K',
+          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
+          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
+
+        },
+        {
+          title: 'Video 9',
+          channel: 'Channel 9',
+          views: '10K',
+          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
+          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
+
+        },
+        {
+          title: 'Video 10',
+          channel: 'Channel 10',
+          views: '10K',
+          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
+          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
+
+        },
+        {
+          title: 'Video 11',
+          channel: 'Channel 11',
+          views: '10K',
+          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
+          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
+
+        },
+        {
+          title: 'Video 12',
+          channel: 'Channel 12',
+          views: '10K',
+          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
+          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
+
         },
       ],
     };

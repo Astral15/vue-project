@@ -1,4 +1,14 @@
 <script>
+import { ref, watch } from 'vue'
+import { useStore } from 'vuex'
+
+const store = useStore()
+const searchValue = ref(null)
+
+watch(searchValue, (value) => {
+  store.dispatch('VideosModule/videos', value)
+})
+
 export default {
   name: 'Header',
   methods: {
@@ -16,13 +26,13 @@ export default {
         <button class="sidebar-toggle" @click.prevent="toggleSidebar">
           <i class="fas fa-bars"></i>
         </button>
-        <input type="text" class="search-bar" placeholder="Search">
+        <input type="text" v-model="searchValue" class="search-bar" placeholder="Search">
         <button class="search-button">
           <i class="fas fa-search"></i>
         </button>
       </div>
       <div class="right">
-       
+
       </div>
     </div>
 
@@ -130,9 +140,9 @@ export default {
 .header {
   display: inline-flex;
 }
+
 #search {
   margin-left: 200px;
 }
-
 </style>
   
