@@ -1,28 +1,9 @@
   
-<script>
-import Sidebar from './components/Sidebar.vue';
-import Header from './components/Header.vue';
-import MainContent from './components/MainContent.vue';
-
-export default {
-    name: 'App',
-    components: {
-        Sidebar,
-        Header,
-        MainContent,
-    },
-};
+<script setup>
 </script>
 
 <template>
-    <div id="app">
-        <Sidebar />
-        <main>
-            <Header />
-            <router-view />
-            <MainContent />
-        </main>
-    </div>
+    <RouterView />
 </template>
   
 <style>

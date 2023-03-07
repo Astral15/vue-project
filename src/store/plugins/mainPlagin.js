@@ -1,7 +1,7 @@
 import mainModule from "../modules/mainModule"
 import menuModule from "../modules/menuModule"
 
-const mainPlugin = () => {
+const mainPlugin = (store) => {
   store.registerModule('main' , mainModule)
   store.registerModule('menu' , menuModule)
 

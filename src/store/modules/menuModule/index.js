@@ -1,14 +1,14 @@
-import getter from "./getter"
+import getters from "./getters"
 import mutations from "./mutation"
 import actions from "./actions"
 const menu = {
-    name: true,
+    namespaced: true,
     state() {
         return {
             menuOn: true,
         }
     },
-    getter,
+    getters,
     mutations,
     actions
 }

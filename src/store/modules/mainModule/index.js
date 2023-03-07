@@ -1,5 +1,5 @@
 const mainModule = {
-    name: true,
+    namespaced: true,
     state() {
         return {
 

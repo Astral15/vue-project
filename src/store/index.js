@@ -1,8 +1,8 @@
 import mainPlugin from "./plugins/mainPlagin"
-import VideoPlugin from './plugins/Videos'
+import VideoPlugin from './plugins/videos'
 import { createStore } from 'vuex'
 
 const store = createStore({
-  Plugins: [mainPlugin , VideoPlugin],
+  plugins: [mainPlugin , VideoPlugin],
 })
 export default store

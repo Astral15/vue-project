@@ -1,12 +1,9 @@
 
-<script>
+<script setup>
 import { computed } from 'vue'
 import { useStore } from 'vuex'
 import { ref } from 'vue'
 
-export default {
-  name: 'Sidebar',
-  setup() {
     let toggledSidebar = ref(true)
     // const store = useStore()
     // let menuOn = computed(() => store.getters["menuModule/menu"])
@@ -27,14 +24,7 @@ export default {
       { name: 'favourite', url: '/src/assets/logos/favorite.svg' },
       { name: 'long out', url: '/src/assets/logos/logout.svg' },
     ]
-
-    return {
-      toggledSidebar,
- //   changeState,
-      logos,
-    }
-  }
-}
+    
 </script>
 
 

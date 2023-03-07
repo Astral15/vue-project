@@ -1,7 +1,7 @@
 const actions = {
     newMenu(state) {
         if(state.menuOn == false) {
-            return state.menuOff
+            return !state.menuOn
         }
         else {
             return state.menuOn

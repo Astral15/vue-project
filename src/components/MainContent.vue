@@ -1,123 +1,23 @@
   
-<script>
+<script setup>
+import { computed } from 'vue'
+import { useStore } from 'vuex';
 
-export default {
-  name: 'MainContent',
-  data() {
-    return {
-      searchValue: null,
-      videos: [
-        {
-          title: 'Video 1',
-          channel: 'Channel 1',
-          views: '10K',
-          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
-          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
+const store = useStore()
+const videos = computed(() => store.getters['videos/getFilterVideos'])
 
-        },
-        {
-          title: 'Video 2',
-          channel: 'Channel 2',
-          views: '20K',
-          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
-          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
+// const playVideo = function(src) {
+//   location.href =src
+// }
 
-        },
-        {
-          title: 'Video 3',
-          channel: 'Channel 3',
-          views: '200K',
-          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
-          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
-
-        },
-        {
-          title: 'Video 4',
-          channel: 'Channel 4',
-          views: '205K',
-          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
-          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
-
-        },
-        {
-          title: 'Video 5',
-          channel: 'Channel 5',
-          views: '10K',
-          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
-          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
-
-        },
-        {
-          title: 'Video 6',
-          channel: 'Channel 6',
-          views: '10K',
-          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
-          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
-
-        },
-        {
-          title: 'Video 7',
-          channel: 'Channel 7',
-          views: '10K',
-          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
-          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
-
-        },
-        {
-          title: 'Video 8',
-          channel: 'Channel 8',
-          views: '10K',
-          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
-          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
-
-        },
-        {
-          title: 'Video 9',
-          channel: 'Channel 9',
-          views: '10K',
-          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
-          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
-
-        },
-        {
-          title: 'Video 10',
-          channel: 'Channel 10',
-          views: '10K',
-          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
-          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
-
-        },
-        {
-          title: 'Video 11',
-          channel: 'Channel 11',
-          views: '10K',
-          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
-          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
-
-        },
-        {
-          title: 'Video 12',
-          channel: 'Channel 12',
-          views: '10K',
-          thumbnail: 'https://i.ytimg.com/vi/NZ08Epp4vD4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLCBVxLTI29AgtAzr8WK9ZH6TUmptg',
-          src: "https://www.youtube.com/watch?v=NZ08Epp4vD4"
-
-        },
-      ],
-    };
-  },
-  methods: {
-    playVideo(src) {
-      location.href = src;
-    }
-  }
-};
 </script>
 
 <template>
   <div class="video-list">
-    <div class="video" v-for="(video, index) in videos" :key="index">
-      <img :src="video.thumbnail" @click="playVideo(video.src)" :alt="video.title" class="thumbnail">
+    <div class="video" v-for="video in videos" :key="video.index">
+      <router-link :to="{name: 'Videos' , params: {id: video.id}}" >
+        <img :src="video.thumbnail" :alt="video.title" class="thumbnail">
+      </router-link>
       <div class="info">
         <h2 class="title">{{ video.title }}</h2>
         <p class="channel">{{ video.channel }}</p>

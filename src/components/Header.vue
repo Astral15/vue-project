@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import { ref, watch } from 'vue'
 import { useStore } from 'vuex'
 
@@ -6,17 +6,12 @@ const store = useStore()
 const searchValue = ref(null)
 
 watch(searchValue, (value) => {
-  store.dispatch('VideosModule/videos', value)
+  store.dispatch('videos/NewVideos', value)
 })
 
-export default {
-  name: 'Header',
-  methods: {
-    toggleSidebar() {
-      this.$emit('toggle-sidebar');
-    }
-  }
-};
+function toggleSidebar() {
+  emit('toggle-sidebar')
+}
 </script>
 
 <template>
@@ -32,7 +27,6 @@ export default {
         </button>
       </div>
       <div class="right">
-
       </div>
     </div>
 
