@@ -27,6 +27,23 @@ const routes = [
         },
       ]
     },
+    {
+      path: '/mainUser/:userId',
+      name: 'MainUser',
+      component: () => import('../views/allUsers/MainUser.vue'),
+      children: [
+        {
+          path: 'allUsers',
+          name: 'AllUsers',
+          component: () => import('../views/allUsers/AllUser.vue'),
+        },
+        {
+          path: 'user',
+          name: 'User',
+          component: () => import('../views/allUsers/User.vue'),
+        },
+      ]
+    },
   ]
 
   export default routes

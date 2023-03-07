@@ -3,6 +3,7 @@ import Sidebar from '../components/Sidebar.vue';
 import Header from '../components/Header.vue';
 import MainContent from '../components/MainContent.vue';
 import MainRegister from '../views/register/MainRegister.vue'
+import MainUser from '../views/allUsers/MainUser.vue';
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import MainRegister from '../views/register/MainRegister.vue'
             <RouterView />
             <MainContent />
             <MainRegister />
+            <MainUser />
         </main>
     </div>
 </div>

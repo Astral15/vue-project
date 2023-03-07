@@ -20,7 +20,7 @@ const registerModule = {
   },
   mutations: {
     AUTHANTICATE(state, payload) {
-      let user = state.user.filter((val) => val.email === payload.email)
+      let user = state.user.find((val) => val.email === payload.email)
       if (user.password === payload.password) {
         state.authenticated = user
       }
@@ -36,7 +36,7 @@ const registerModule = {
   },
   actions: {
     authenticate({ commit }, payload) {
-      commit(AUTHANTICATE, payload)
+      commit("AUTHANTICATE", payload)
     },
     register({ commit }, payload) {
       commit("REGISTER_NEW_USER", payload)
