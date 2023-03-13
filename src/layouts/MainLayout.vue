@@ -4,6 +4,7 @@ import Header from '../components/Header.vue';
 import MainContent from '../components/MainContent.vue';
 import MainRegister from '../views/register/MainRegister.vue'
 import MainUser from '../views/allUsers/MainUser.vue';
+import Categories from '../views/categories/Categories.vue';
 </script>
 
 <template>
@@ -16,6 +17,7 @@ import MainUser from '../views/allUsers/MainUser.vue';
             <MainContent />
             <MainRegister />
             <MainUser />
+            <Categories />
         </main>
     </div>
 </div>

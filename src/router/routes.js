@@ -21,9 +21,9 @@ const routes = [
           component: () => import('../views/register/Register.vue'),
         },
         {
-          path: 'update',
-          name: 'Update',
-          component: () => import('../views/register/Update.vue'),
+          path: 'login',
+          name: 'Login',
+          component: () => import('../views/register/Login.vue'),
         },
       ]
     },
@@ -44,6 +44,11 @@ const routes = [
         },
       ]
     },
+    {
+      path: '/categories/:userId',
+      name: 'Categories',
+      component: () => import('../views/categories/Categories.vue')
+    }
   ]
 
   export default routes

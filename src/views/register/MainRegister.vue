@@ -1,8 +1,12 @@
 <script setup>
 
 import { RouterLink } from 'vue-router'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const register = (state) => {
+    router.push({ name: 'Register' , params:'1' })
     console.log("vmushaob")
 }
 </script>
@@ -11,7 +15,7 @@ const register = (state) => {
     <button @click="register">
         <img class="logo" src="/src/assets/logos/registration.svg" alt="menu" width="25" height="25" />
     </button>
-    <RouterLink :to="{ name: 'Register', params: {userId: 1}}">register</RouterLink>
-    <RouterLink :to="{ name: 'Update', params: {userId: 1}}">update</RouterLink>
+    <RouterLink :to="{ name: 'Register', params: {userId: 1}}">Register</RouterLink>
+    <RouterLink :to="{ name: 'Login', params: {userId: 1}}">Login</RouterLink>
     <RouterView />
 </template>
