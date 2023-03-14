@@ -7,7 +7,7 @@ const searchValue = ref(null)
 
 watch(searchValue, (value) => {
   store.dispatch('videos/NewVideos', value)
-})
+} )
 
 function toggleSidebar() {
   emit('toggle-sidebar')
